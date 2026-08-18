@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-            </head>
-            <body> {
-                <button> </button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                }
+    <title>Quebra-Pedra</title>
 
-                </body>
-                </html>
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
 
-                <!DOCTYPE html>
-                <html lang="pt-BR">
-                <head>
-                    <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Tela Inicial</title>
-                                <style>
-                                        /* Deixa a tela ocupando o espaço todo e centraliza o conteúdo */
-                                                body {
-                                                            margin: 0;
-                                                                        height: 100vh;
-                                                                                    display: flex;
-                                                                                                justify-content: center;
-                                                                                                            align-items: center;
-                                                                                                                        background-color: #121212;
-                                                                                                                                    font-family: Arial, sans-serif;
-                                                                                                                                            }
+    <!-- Arquivo JavaScript -->
+    <script src="script.js" defer></script>
+</head>
 
-                                                                                                                                                    /* Estilo do botão */
-                                                                                                                                                            .btn-entrar {
-                                                                                                                                                                        padding: 15px 40px;
-                                                                                                                                                                                    font-size: 18px;
-                                                                                                                                                                                                font-weight: bold;
-                                                                                                                                                                                                            color: #ffffff;
-                                                                                                                                                                                                                        background-color: #007BFF;
-                                                                                                                                                                                                                                    border: none;
-                                                                                                                                                                                                                                                border-radius: 8px;
-                                                                                                                                                                                                                                                            cursor: pointer;
-                                                                                                                                                                                                                                                                        transition: background-color 0.3s ease, transform 0.1s ease;
-                                                                                                                                                                                                                                                                                }
+<body>
 
-                                                                                                                                                                                                                                                                                        /* Efeito quando o mouse passa por cima do botão */
-                                                                                                                                                                                                                                                                                                .btn-entrar:hover {
-                                                                                                                                                                                                                                                                                                            background-color: #0056b3;
-                                                                                                                                                                                                                                                                                                                    }
+    <main class="jogo">
 
-                                                                                                                                                                                                                                                                                                                            /* Efeito quando o botão é clicado */
-                                                                                                                                                                                                                                                                                                                                    .btn-entrar:active {
-                                                                                                                                                                                                                                                                                                                                                transform: scale(0.98);
-                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                            </style>
-                                                                                                                                                                                                                                                                                                                                                            </head>
-                                                                                                                                                                                                                                                                                                                                                            <body>
+        <h1>🔨 Quebra-Pedra</h1>
 
-                                                                                                                                                                                                                                                                                                                                                                <!-- Botão centralizado -->
-                                                                                                                                                                                                                                                                                                                                                                    <button class="btn-entrar" onclick="alert('Você entrou!')">ENTRAR</button>
+        <div class="informacoes">
 
-                                                                                                                                                                                                                                                                                                                                                                    </body>
-                                                                                                                                                                                                                                                                                                                                                                    </html>
+            <div class="contador">
+                ⏱️ Tempo:
+                <span id="tempo">60</span>s
+            </div>
+
+            <div class="contador moedas">
+                🪙 Moedas:
+                <span id="moedas">0</span>
+            </div>
+
+        </div>
+
+        <div class="fase">
+            Fase: <strong id="fase">1</strong>
+        </div>
+
+        <div id="pedra" class="pedra">
+            🪨
+        </div>
+
+        <div class="vida-container">
+            <div id="vida"></div>
+        </div>
+
+        <p>
+            Resistência:
+            <strong id="resistencia">20</strong>
+        </p>
+
+        <button id="martelo" class="martelo">
+            🔨 BATER NA PEDRA
+        </button>
+
+        <p id="mensagem">
+            Clique no martelo para começar!
+        </p>
+
+    </main>
+
+</body>
+
+</html>
